@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	// 문제.
+	// Student 생성자 함수를 정의하시오.
+	// 1. 매개변수 : name, kor, eng, mat;
+	// 2. 프로퍼티 : name, kor, eng, mat, getAverage(), getGrade();
+	// 3. Student 3명 임의로 생성하시오.
+	// 4. Student 배열에 3명을 저장하시오.
+	// 5. Student 3명의 정보를 콘솔에 출력하시오.
+	
+	function Student (name, kor, eng, math) {
+		this.name = name;
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+		
+		// fnction들의 내용은 모든 객체가 동일한 내용을 참조하게 되므로 공용 공간인 prototype에 저장해 두는 것이 좋다.
+		this.__proto__.getAverage = function() {
+			return (this.kor + this.eng + this.math) / 3;
+		};
+		
+		this.__proto__.getGrade = function() {
+			if (this.getAverage() >= 90)
+				return 'A';
+			else if (this.getAverage() >= 80)
+				return 'B';
+			else if (this.getAverage() >= 70)
+				return 'C';
+			else if (this.getAverage() >= 60)
+				return 'D';
+			else 
+				return 'F';
+		};
+	}	// end 생성자 함수
+	
+	students = [
+		new Student("제임스", 75, 80, 95),
+		new Student("애밀리", 85, 90, 85),
+		new Student("밥", 90, 80, 95)
+	];
+	
+	// students[i]가 모두 중복되므로 with로 한꺼번에 처리할 수 있다.
+	 for (let i = 0; i < students.length; i++){
+		
+		with (students[i]) {	// 모두 students[i]가 붙는다.
+			console.log('이름 : ' + name);
+			console.log('국어 : ' + kor);
+			console.log('영어 : ' + eng);
+			console.log('수학 : ' + math);
+			console.log('평균 : ' + getAverage());
+			console.log('학점 : ' + getGrade());
+		}
+		
+		/* // for문 사용, but 비추
+		for (var p in students[i]) {
+			if (p == "getAverage" || p == "getGrade") {
+				students[i][p]();
+			} else
+				students[i][p];
+		} */
+	} 
+</script>
+</head>
+<body>
+
+</body>
+</html>

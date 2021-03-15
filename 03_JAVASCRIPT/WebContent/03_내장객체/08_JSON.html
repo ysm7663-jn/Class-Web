@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<input type="button" value="시이트 정보 가져오기" onclick="getSite()" />
+	<br/><br/>
+	
+	<table border="1">
+		<thead>
+			<tr>
+				<td>로고</td>
+				<td>사이트명</td>
+				<td>링크</td>
+			</tr>
+		</thead>
+		<tbody id="site-contents">
+		</tbody>
+		
+	</table>
+	
+	<script type="text/javascript">
+
+	var sites = [
+		{
+			"logo": "https://www.google.co.kr/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+			"name": "google",
+			"url": "https://www.google.co.kr/"
+		},
+		{
+			"logo": "https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png",
+			"name": "daum",
+			"url": "https://www.daum.net/"
+		}
+	];
+	
+		function getSite() {
+			
+				var result = '';
+				var strSite = JSON.stringify(sites);
+				var siteData = JSON.parse(strSite);
+				
+			for (let i = 0; i < sites.length; i++) {
+				result += '<tr>';
+				result += '<td><img src="' + sites[i].logo + '"></td>'; 
+				result += '<td>' + sites[i].name + '</td>';
+				result += '<td><a href="' + sites[i].url + '">' + sites[i].name + '</a></td>'; 
+				result += '</tr>';
+			}
+			
+			document.getElementById('site-contents').innerHTML = result;
+		}
+	
+	</script>
+
+
+</body>
+</html>
