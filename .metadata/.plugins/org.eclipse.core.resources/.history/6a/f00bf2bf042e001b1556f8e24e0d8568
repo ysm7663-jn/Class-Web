@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<form 
+		action="" id="domain" onsubmit="move-domain()"
+	>
+	
+		<select id="select">
+			<option >추천 사이트 선택</option>
+			<option value="google.com">구글</option>
+			<option value="naver.com">네이버</option>
+			<option value="daum.com">다음</option>
+		</select>
+		&nbsp;&nbsp;
+		<input type="submit" name="move-domain" value="GO">
+	
+	</form>
+	
+	<script type="text/javascript">
+	
+		
+	
+	</script>
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<form 
+		name="domain" onsubmit="return move_domain()"
+	>
+	
+		<select name="site">
+			<option value="">추천 사이트 선택</option>
+			<option value="https://www.google.com">구글</option>
+			<option value="https://www.naver.com">네이버</option>
+			<option value="https://daum.net">다음</option>
+		</select>
+		&nbsp;&nbsp;
+		<input type="submit" name="move-domain" value="GO">
+		<!-- <button>GO</button> : 같은 기능 -->
+	</form>
+	
+	<script type="text/javascript">
+	
+		function move_domain() {
+			
+			var f = document.forms['domain'];
+			
+			
+			if (f.site.value == '') {
+				var popup = window.open('', '', 'width=50, hegiht=50');
+				alert('추천 사이트를 선택하세요.');
+				return false;				
+			}
+			
+		}
+	
+	</script>
+	
+		
+	
+	
+</body>
+</html>

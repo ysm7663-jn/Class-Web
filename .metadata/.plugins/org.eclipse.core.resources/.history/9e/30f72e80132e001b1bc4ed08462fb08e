@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form>
+		구독할 이메일을 입력하세요.<br/>
+		<input type="text" name="email">
+		<input type="button" name="전송" onclick="sendEmail(this.form)">	<!-- 현재 form 태그 전체 -->
+		
+	</form>
+	
+	<script type="text/javascript">
+	
+		function sendEmail() {
+			
+		}	
+	
+	</script>
+
+</body>
+</html>

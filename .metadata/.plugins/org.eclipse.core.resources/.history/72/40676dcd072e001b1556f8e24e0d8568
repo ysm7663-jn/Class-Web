@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<input type="button" value="그림변경하기" onclick="iamgeChange()">
+	<br/><br/><br/>
+	
+	<div id="image-box">
+		
+	</div>
+	
+	<script type="text/javascript">
+	
+	// id="image-box"인 곳에 <img> 태그 넣기
+	// img 태그 생성 후 추가
+	var img = document.createElement('img');	// 삽입할 요소
+	
+	var image_box = documnet.getElementById('image-box');	// 부모 요소
+	image_box.appendChild(img);
+	
+	var images = ['event.jpg', 'cloud.jpg', 'park.jpg'];
+	var i = 0;
+	
+	function imageChange() {
+		
+		img.src = '../assets/image/' + images[i];
+		i++;
+		i %= 3;
+	}
+	
+	
+	</script>
+
+</body>
+</html>

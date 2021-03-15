@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	
+	.menu-bar{
+		display: flex;
+		list-style-type: none;	/* 불릿 기호 없애기 */
+		padding: 0px;	/* 왼쪽 내부 여백 제거 */
+		background: black;
+	}
+	
+	.menu-bar > li > a {
+		display: block; /* a 태그는 인라인레벨이므로 블록레벨로 바꿈 */
+		width: 150px;
+		height: 150px;
+		
+		text-align: center;
+		line-height: 150px;
+	
+		text-decoration: none;
+		color: white;
+		font-weight: 900;
+		
+		padding: 0px 10px;
+	}
+	
+	
+	.top-menu > .menu-bar > li > a:hover {
+		background: gray;
+		color: black;
+	}
+	
+	.top-menu > .menu-bar > li > a:active {
+		background: green;
+		color: black;
+	}
+	
+</style>
+</head>
+<body>
+
+	<div class = "top-menu">
+		<ul class ="menu-bar">
+			<li><a id = "HOME" href="javascript:void(0)">HOME</a></li>
+			<li><a href="javascript:void(0)">BOARD</a></li>
+			<li><a href="javascript:void(0)">GUEST</a></li>
+			<li><a href="javascript:void(0)">ABOUT</a></li>
+		</ul>
+	</div>
+	
+
+</body>
+</html>

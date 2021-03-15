@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	/* 
+		1. 요소 생성 : document.createElement(요소);
+		2. 요소 추가 : document.appendChild(요소);
+	*/
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

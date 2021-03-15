@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+	.blind {
+		visibility: hidden;	/* 구역은 남기고, 화면에서 숨긴다. */
+		display: none;		/* 구역도 남기지 않고, 화면에서 숨긴다. */
+	}	
+	
+	fieldset {
+		width: 400px;
+	}
+	
+	ul {
+		list-style: none;
+	}
+	
+	ul > li {
+		margin: 10px;
+	}
+	
+	label {
+		/* margin-right: 20px; */
+		display: inline-block;	/* 같은 inline을 유지하면서 width가 가능하다. */ 
+		width: 150px;
+		/* 크기를 맞추기 용이하기 때문에 선호 */
+	}
+	/*
+	#member, #item {
+		width: 100px; 
+	}
+	*/
+	input[type= "text"] {
+		width: 100px;
+	}
+	
+
+</style>
+</head>
+<body>
+
+	<!-- 
+		form 속성
+		
+		1. action: 입력 데이터를 어디로 보낼 것인가?
+		2. method
+			1) get  : 보안이 필요 없을 때(단순 검색, 디폴트)
+			2) post : 보안이 필요 할 때(로그인, 회원가입)
+	 -->
+
+	<form >
+		<fieldset>
+			<legend class = "blind">등록 정보</legend>
+			<ul>
+				<li>
+					<label for = "member">참여인원</label>
+					<input type = "text" name ="member" id = "member" />
+				</li>
+					
+				<li>
+					<label for = "item">지원물품</label>
+					<input type = "text" name = "item" id = "item" />	
+				</li>
+				
+				<li>
+					<label for = "state">희망단계</label>
+					<input type = "range" name = "state" id = "state" min = "1" max = "10" value = "5" />
+				</li>
+				
+			</ul>
+		</fieldset>
+	</form>
+	
+	<form>
+	
+	</form>
+
+</body>
+</html>

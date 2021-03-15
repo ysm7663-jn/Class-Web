@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+/* 
+	문제 1. 1 ~ 20 사이의 난수가 발생되면 맟추기
+	1) 입력 대화 상자를 이용해서 입력
+	2) 매 입력 마다 '정답', '오답'
+	3) '정답'을 몇 번반메 맞혔느지 함께 출력
+*/
+
+/* 
+	문제2. 적을 쓰러뜨려라.
+		1) 적의 에너지는 100이다.
+		2) 내가 한 번 공격할때마다 0 ~ 19 사이의 에너지를 닳게 한다.
+		3) 모든 공격은 자동으로 진행한다.
+		4) 공격마다 적의 남은 에너지를 그래프형태로 출력한다.(에너지 : 5 ■ ■ ■ ■ ■)
+		5) 몇 번만에쓰러뜨렸는지 함께 출력
+		6) 5% 확률로 한 번에 쓰러뜨릴 수 있다.
+*/
+
+</script>
+</head>
+<body>
+
+	<script type="text/javascript">
+	// 1번 문제
+	var cnt = 0;
+	var comNum = parseInt((Math.random() * 20) + 1);
+
+	while (true) {
+		var num = parseInt(prompt('숫자를 입력하세요'));
+		if (num == comNum) {
+			alert(cnt + '번 만에 정답');
+			break;			
+		} 
+		else { 
+			alert('오답');
+			cnt++;			
+		}
+	} 
+	
+	/* 
+		var comNum = parseInt((Math.random() * 20) + 1);
+		var cnt = 0;
+		var isSuccess = false;
+		
+		do {
+			n = Number(prompt('1 ~ 20 사이 입력 >> '));
+			cnt++;
+			if (n < 1 || n > 20) {
+				alert('1 ~ 20 사이만 입력하세요.';)
+			} else {
+				if (n == comNum) {
+					isSuccess = true;
+					alert(cnt + '번 만에 정답입니다.');
+				} else {
+					alert('오답입니다.');
+				}
+			}
+		} while (!isSuccess);
+	*/
+	
+	// 2번 문제
+	/* var hp = 100;
+	var cnt = 0;
+	while (true) {
+		var attack = parseInt(Math.random() * 20);
+		
+		if (hp > 0) {
+			var critical = Math.random() < 0.05 ? hp = 0 : hp -= attack;
+			if (hp < 0) 
+				hp = 0;
+			// (hp < 0) && (hp = 0);
+			cnt++;
+			document.write('에너지 : ' + hp);
+			for (let i = 0; i < hp; i++) {
+				document.write('■');
+			} 
+			document.write('<br/>');
+			
+		} else {
+			document.write(cnt + '번 만에 죽임');
+			break;
+			}
+		} */
+		var hp = 100;    // 적의 에너지
+		var attack = 0;  // 나의 공격력
+		var count = 0;   // 공격 횟수
+		var graph = '';  // 에너지 그래프
+		
+		var i = 0;
+		while (i < hp) {
+			graph += '■';
+			i++;
+		}
+		document.write('적의 에너지: ' + graph + ' <b>(' + hp + ')</b><br/>');
+		
+		do {
+			
+			if (Math.random() < 0.05) {  // 5% 확률로
+				hp = 0;
+			} else {
+				attack = parseInt(Math.random() * 20);  // 공격력이 랜덤 생성 (0 ~ 19)
+				hp -= attack;
+				(hp < 0) && (hp = 0);  // if (hp < 0) { hp = 0; } 과 같다.		
+			}
+			
+			count++;
+			
+			graph = '';
+			i = 0;
+			while (i < hp) {
+				graph += '■';
+				i++;
+			}
+			blankGraph = '';
+			i = 0;
+			while (i < (100 - hp)) {
+				blankGraph += '□';
+				i++;
+			}
+			
+			document.write('적의 에너지: ' + graph + blankGraph + ' <b>(' + hp + ')</b><br/>');
+			
+		} while (hp > 0);
+		
+		document.write('<h3>' + count + '번만에 쓰러뜨렸다.</h3>');
+	</script>
+	
+</body>
+</html>

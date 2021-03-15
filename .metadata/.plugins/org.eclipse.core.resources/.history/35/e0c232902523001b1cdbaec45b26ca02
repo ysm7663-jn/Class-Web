@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+	/* 벤더 프리픽스 */
+	-webkit-column-count: 3;
+</style>
+
+</head>
+<body>
+
+	<h1>3단 문서</h1>
+	<div>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet tellus elementum, venenatis lectus sit amet, commodo mauris. Nullam malesuada sit amet enim sed sagittis. Nullam id lacus vitae metus molestie luctus. Quisque rutrum a lacus quis eleifend. Mauris in fermentum justo. Maecenas eu mollis diam, non dapibus tortor. Aliquam consectetur nibh sapien, ac varius felis dignissim at.
+	</div>
+	
+	
+	
+</body>
+</html>

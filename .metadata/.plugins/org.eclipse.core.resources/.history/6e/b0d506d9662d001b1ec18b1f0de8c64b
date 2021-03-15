@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div id="box">
+		BOX
+	</div>
+	
+	<script type="text/javascript">
+	
+		var box = document.getElementById('box');
+		
+		// 1. 마침표 표기법
+	
+	</script>
+
+</body>
+</html>

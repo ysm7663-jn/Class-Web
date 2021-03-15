@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	
+	 .left-box {
+		width: 400px;
+		height: 400px;
+		border: 1px solid black;
+		background: skyblue;
+		float: left;
+	}
+	
+	.second-container {
+		width: 800px;
+		height:200px;
+		border: 1px solid black;
+		background: aqua;
+		clear: left;	
+		/* 
+			float: ~; 에서 벗어나시오. 
+			float: left >> clear: left;
+			float: right >> clear: right;
+			float: left, right >> clear: both;
+			*float랑 같은 방향에서 벗어나기 
+		*/
+	}
+			
+</style>
+</head>
+<body>
+
+		<div class = "left-box">1</div>
+		
+		<div class = "left-box">2</div>
+		
+		<div class = "second-container">3</div>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+<style type="text/css">
+	
+	body {
+		font-family: 'Nanum Myeongjo', serif;
+	}
+	
+	table {
+		width: 800px;
+		height: 500px;
+		margin: 30px auto;
+		border-collapse: colleps;	/* single line으로 border 처리 */
+	}
+	
+	td {
+		border: 1px solid black;
+		padding: 3px 8px;
+	}
+	
+	.title {
+		text-align: center;
+		background: black;
+		color: white;
+		font-weight: 900;
+	}
+	
+	.red-text {
+		color: red;
+		font-size: 12px;
+	}
+	
+	td:first-of-type {
+		font-weight: bold;
+		width: 150px;
+	}
+	
+	.basic-info {
+		width: 250px;
+	}
+	
+	textarea {
+		width: 600px;
+	}
+	
+	.pid {
+		width: 100px;
+	}
+	
+	.birth {
+		width: 80px;
+		background: darkgray;
+	}
+	
+	.buttons {
+		text-align: center;
+	}
+	
+
+</style>
+
+
+<!-- css 우선순위 : tag < class < id, 좁은 범위일 수록 우선순위가 높아진다 -->
+
+</head>
+<body>
+	<form>
+
+	<table>
+		<tbody>
+			<tr>
+				<td colspan = "2" class = "title">회원기본정보</td>
+			</tr>
+			
+			<tr>
+				<td><label for = "id">아이디</label></td>
+				<td>
+					<input id = "id" name = "id" type = "text" placeholder = "※8-16자 소문자+숫자" class = "basic-info"/>
+					<span class = "red-text">필수 항목입니다.</span>	
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label for = "pw">비밀번호</label></td>
+				<td>
+					<input id = "pw" name = "pw" type = "password" placeholder = "※8-16자 대문자+소문자+숫자" class = "basic-info"/>
+					<span class = "red-text">필수 항목입니다.</span>	
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label for = "pw2">비밀번호확인</label></td>
+				<td>
+					<input id = "pw2" type = "password" class = "basic-info"/>
+					<span class = "red-text">한 번 더 입력하세요.</span>	
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label for = "emailId">이메일</label>
+				<td>
+					<input id = "emailId" name = "emailId" type = "text" class = "basic-info"/>
+					@
+					<input id = "domain" name = "domain" type = "text" list = "domain-list" placeholder = "선택/직접입력" class = "basic-info"/>
+					<datalist id = "domain-list">
+						<option value = "naver.com">
+						<option value = "gmail.com">
+						<option value = "hanmail.net">
+					</datalist>
+				</td> 
+			</tr>
+			
+			<tr>
+				<td><label for = "name">이름</label></td>
+				<td><input id = "name" name = "name" type = "text" class = "basic-info"/></td>
+			</tr>
+			
+			<tr>
+				<td colspan = "2" class = "title">개인정보</td>
+			</tr>
+			
+			<tr>
+				<td><label for = "pid">주민등록번호</label></td>
+				<td>
+					<input id = "pid" name = "pid1" type = "text" class = "pid"/>
+					-
+					<input name = "pid2" type = "password" class = "pid" />
+					예) 123456-1234567
+				</td>
+			</tr>
+			
+			<tr>
+				<td>생일</td>
+				<td>
+					<input name = "year" type = "text" class = "birth" />년	
+					<input name = "month" type = "text" class = "birth" />월
+					<input name = "day" type = "text" class = "birth" />일
+				</td>
+			</tr>
+			
+			<tr>
+				<td>성별</td>
+				<td>
+					<input id = "m" name = "gender" type = "radio" value = "male" />
+					<label for = "m">남</label>
+					<input id = "f" name = "gender" type = "radio" value = "female" />
+					<label for = "f">여</label>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>관심분야</td>
+				<td>
+					<label><input type = "checkbox" name = "interest" value = "travel" />여행</label>
+					<label><input type = "checkbox" name = "interest" value = "movie" />영화</label>
+					<label><input type = "checkbox" name = "interest" value = "reading" />독서</label>
+					<label><input type = "checkbox" name = "interest" value = "music" />음악</label>
+					<label><input type = "checkbox" name = "interest" value = "" />관심없음</label>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>자기소개</td>
+				<td><textarea name = "self" rows= "8" cols = "40" /></textarea></td>
+			</tr>
+					
+		</tbody>
+	</table>
+	<br/>
+	
+	<div class = "buttons">
+		<input type = "submit" value = "회원가입" />
+		<input type = "reset" value = "다시입력" />
+	</div>
+	
+	</form>
+
+</body>
+</html>

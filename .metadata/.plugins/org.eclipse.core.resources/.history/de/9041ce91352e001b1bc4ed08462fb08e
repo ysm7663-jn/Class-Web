@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function fn(f) {
+		
+		var query = f.query.value;
+		
+		var reg = /^[0-9a-z]{5,}$/;
+		
+		
+		// 1. 문자열에서 지원하는 함수
+		// 1) match 함수
+		
+		
+		
+		// 2. 정규식에서 지원하는 함수
+		
+	}
+	
+</script>
+</head>
+<body>
+
+	
+	<form>
+		<input type="text" name="query" />
+		<input type="button" value="검사" onclick="fn(this.form)" />
+	</form>
+
+</body>
+</html>

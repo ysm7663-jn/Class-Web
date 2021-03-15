@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	// 문제1. 현재 시간이 11시 전이면 '오전'
+	// 		 현재 시간이 13시 전이면 '점심'
+	//		 현재 시간이 17ㅣ 전이면 '오후'
+	//		 나머지 '저녁'을 출력하시오.
+	
+	// 문제2. 오늘의 요일을 출력하시오. (수요일)
+	
+	// 문제3. 1초 동안 'Hello'를 웹 페이지에 계속 출력하시오.
+	//       1: hello
+	//       2: hello
+	//		 ...
+
+</script>
+</head>
+<body>
+
+<script type="text/javascript">
+  	var now = new Date().getHours();
+	// 문제 1.
+	if (now < 11)
+		alert('오전');
+	else if (now < 13)
+		alert('점심');
+	else if (now < 17)
+		alert('오후');
+	else
+		alert('저녁');
+	
+	// 문제 2.
+	var nowDay = new Date().getDay();
+	switch (nowDay) {
+	case 0 :  
+		alert('일요일');
+		break;
+	case 1 :  
+		alert('월요일');
+		break;
+	case 2 :  
+		alert('화요일');
+		break;
+	case 3 :  
+		alert('수요일');
+		break;
+	case 4 :  
+		alert('목요일');
+		break;
+	case 5 :  
+		alert('금요일');
+		break;
+	default :
+		alert('토요일');
+	} 
+	 
+	
+	// 문제 3.
+	
+	var startMillis = new Date().getTime();
+	var a = 0;
+	while (new Date().getTime() <= startMillis + 1000) {
+		document.write(++a + ': hello<br/>');
+	}
+
+	// 문제 4. 날짜/시간 데이터를 전달하면
+	// 		  다음과 같은 형식의 데이터를 반환하는 to12times 함수를 구현하시오.
+	//		 2020-11-18 수요일 오후 6:14
+	console.log(to12times (new Date()));
+	
+	function to12times(date) {
+		return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + ' ' +
+		['일', '월', '화', '수', '목', '금', '토'][date.getDay()] + '요일 ' + 
+		(date.getHours < 12 ? '오전 ' : '오후 ') + date.getHours() + ':' + date.getMinutes();
+	}
+	
+	// 문제5. 입력 대화상자로 생일(yyyy-mm-dd)을 입력 받아서
+	// getAge 함수에 전달하면 나이를 반환하도록 구현하시오.
+	
+	var age = getAge(prompt('생일(yyyy-mm-dd)을 입력하세요.'));
+	console.log('나이: ' + age + '살');
+	
+	function getAge(strDate) {
+		// return 현재년도 - 태어난년도 + 1;
+		return new Date().getFullYear() - new Date(strDate).getFullYear() + 1;
+	}
+	
+	
+</script>
+
+
+</body>
+</html>

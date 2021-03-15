@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+	fieldset {
+		width: 500px;
+		margin-bottom: 20px;
+	}
+
+	legend {
+		display: none;
+	}
+	
+	.small {
+		font-size: 13px;
+	}
+	
+</style>
+</head>
+<body>
+	<form>
+	
+		<fieldset>
+			<legend>과목</legend>
+				이 달에 신청할 과목을 선택하세요<span class = "small">(1과목만 가능)</span><br/>
+				<input type ="radio" name = "subject" id = "subject1" value = "speaking" checked><label for ="subject1">회화</label>
+				<input type ="radio" name = "subject" id = "subject2" value = "grammer"><label for ="subject2">문법</label>
+				<input type ="radio" name = "subject" id = "subject3" value = "writing"><label for ="subject3">작문</label>
+				<!-- java에선 String subject를 만들고, 선택된 value값을 저장한다. value가 없으면 값이 전달되지 않는다.-->
+		</fieldset>
+		<fieldset>
+			<legend>뉴스</legend>
+				메일로 받고 싶은 뉴스 주제를 선택해 주세요 <span class = "small">(복수 선택 가능)</span><br/>
+				<input type = "checkbox" name = "mailing" id = "d" value = "world"><label for = "d">해외 단신</label>
+				<input type = "checkbox" name = "mailing" id = "e" value = "speaking"><label for = "e">5분 회화</label>
+				<input type = "checkbox" name = "mailing" id = "f" value = "popsong"><label for = "f">모닝팝스</label>
+				<!-- String[] mailing을 준비, 선택된 value들의 값을 저장한다. -->
+		</fieldset>
+	</form>
+</body>
+</html>

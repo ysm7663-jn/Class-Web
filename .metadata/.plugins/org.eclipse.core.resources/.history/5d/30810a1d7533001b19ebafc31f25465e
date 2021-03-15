@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+
+	//onload = function() {
+
+	//	}
+	// 1. 이벤트 이름	: load
+	// 2. 이벤트 속성	: onload
+	// 3. 이벤트 리스너  : function(){}
+	// 4. 이벤트 객체	: window
+	
+	// 이벤트 등록
+	// 1. $(선택자).이벤트 이름.(이벤트 리스너);
+	// 2. $(선택자).on('이벤트 이름', 이벤트리스너);
+	
+	// 페이지 로드 이벤트
+	$(c)
+	
+	
+	
+</script>
+</head>
+<body>
+	<h3>우리나라 수도는?></h3>
+	<div id="ansewer"></div>
+	<input type="button" id="btn" value="정딥보기">
+	<input id="answer">서울</div>;
+	
+	>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function() {
+		
+		// 객체 생성
+		var book = {
+				title: "어린왕자",
+				publisher: "좋은출판사",
+				price: 15000
+		};
+		
+		// 프로퍼티 추가
+		book.author = "생떽쥐베리";
+		
+	});
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

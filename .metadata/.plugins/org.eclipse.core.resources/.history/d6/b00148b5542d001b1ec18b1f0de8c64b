@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<input type="button" value="사람 정보 가져오기" onclick="bring-people()" />
+	<br/><br/>
+	<table border="1">
+		<thead>
+			<tr>
+				<td>이름</td>
+				<td>나이</td>
+			</tr>
+		</thead>
+		<tbody id="people-info">
+			
+				
+		</tbody>
+	</table>
+
+	<script type="text/javascript">
+	
+		var people = [
+			{
+				name : 'james',
+			 	 age : 25
+			},
+			{
+				name : 'emily',
+				 age : 26
+			}
+		];
+		
+		function bring-people() {
+			var result='';
+			
+			for (let i = 0; i < people.length; i++) {
+				result += '<tr>';
+				
+				for (var p in people[i]) {
+					result += '<td>' + people[i][p]; + '</td>';
+				}
+				
+				result += '</tr>';
+			}
+			document.getElementById('people-info').innerHTML = result;
+		}
+		
+	
+	</script>
+
+</body>
+</html>

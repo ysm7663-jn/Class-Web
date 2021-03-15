@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+	/* ul과 li 태그는 모두 블록레벨 태그이다.*/
+	
+	ul {
+		list-style-type: disc;	/* none, disc(검은원), circle(빈원), square(검은사각형) */
+		background: yellow;
+	}
+	
+	ul > li {
+		margin: 20px;
+		background: orange;
+	}
+	
+	
+</style>
+
+</head>
+<body>
+
+	<h3>순서가 없는 목록</h3>
+	
+	<ul>
+		<li>JAVA</li>
+		<li>ORACLE</li>
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>JAVASCRIPT</li>
+	</ul>
+	<div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	
+</body>
+</html>

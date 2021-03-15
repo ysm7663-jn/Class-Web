@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form>
+		<input type="text" name="name" placeholder="NAME" /><br/>
+		
+		<select name="subject">
+			<option value="">과목선택</option>
+			<option value="kor">국어</option>
+			<option value="eng">영어</option>
+			<option value="math">수학</option>
+		</select>
+		
+		<input type="text" name="score" placeholder="SCORE" /><br/>
+		<input type="button" value="전송" onclick="sendScore(this.form)" />
+		
+	</form>
+
+	<script type="text/javascript">
+	
+		function sendScore(f) {
+			// NAME
+			var name = f.name;
+			if (name.value == '') {
+				alert('이름을 입력하세요.');
+				name.focus();
+				return ;
+			}
+		
+			// SUBJECT
+			var subject = f.subject;
+			if (subject.value == ""){
+				alert('과목을 선택하세요.');
+				subject.focus();
+				return ;
+			}
+			
+			// SCORE
+			var score = f.score;
+			if (score.value == '' || parseInt(score.value) < 0 || parseInt(score.value) > 100 || isNaN(score.value)) {	// isNaN : 숫자가 아닐 때
+				// + 연산을 제외한 나머지 연산은 parseInt가 없어도 비교가 가능하다. (위의 경우 생략 가능)
+				alert('점수를 확인하세요.');
+				score.value = ''; // 입렫돼있던 값을 지워버림
+				score.focus();
+				return ;
+			}
+			
+			f.action = '#';
+			f.submit;
+		}
+	
+	</script>
+
+</body>
+</html>

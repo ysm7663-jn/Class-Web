@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+	
+		var people = [
+			{
+				name : 'james',
+			 	age  : 25
+			},
+			{
+				name : 'emily',
+				 age : 26
+			}
+		];
+	
+	</script>
+	
+
+
+</body>
+</html>

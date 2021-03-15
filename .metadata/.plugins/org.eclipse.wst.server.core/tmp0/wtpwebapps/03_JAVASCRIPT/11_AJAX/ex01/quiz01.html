@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	onload = function() {
+		var button = document.getElementById('button');
+		button.addEventListener('click', function() {
+			var xhr = new XMLHttpRequest();	// 객체 생성
+			xhr.open('get', 'QDATA', false);	// open(동기통신 확인)
+			xhr.send();	// send(서버에게 정보요청)
+			document.getElementById('hello').textContent = xhr.responseText;	// 서버가 응답한 데이터 확인
+		});
+	}
+</script>
+</head>
+<body>
+
+	<!-- 버튼을 누르면 QDAT.html id="hello"에 표시하시오 -->
+
+	<input type="button" id="button" value="인사" />
+	<br/><br/>
+	<div id="hello"></div>
+	
+	
+</body>
+</html>
